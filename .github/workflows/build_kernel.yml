@@ -38,7 +38,7 @@ jobs:
       - name: Setup Repository & Resources
         run: |
           git config --global user.name "gofaraway71" && git config --global user.email aalbatron@google.com
-          git clone --depth=1 https://github.com/albatron34000/kernel_storm_realme_salaa/tree/14 mt6785
+          git clone --depth=1 https://github.com/albatron34000/kernel_storm_realme_salaa mt6785
           cd mt6785
           git clone --depth=1 https://github.com/psionicprjkt/aarch64-linux-android-4.9 arm64 && git clone --depth=1 https://github.com/psionicprjkt/arm-linux-androideabi-4.9 arm32
           wget --quiet https://android.googlesource.com/platform//prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r522817.tar.gz -O "clang.tar.gz"
