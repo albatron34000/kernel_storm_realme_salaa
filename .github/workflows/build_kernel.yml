@@ -57,7 +57,7 @@ jobs:
           body: |
             Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
             Device: ${{ github.event.inputs.DEVICE_NAME }}
-            Target: KernelSU
+            Target: Gofaraway_salaa_KernelSU
             Version:Android14
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
