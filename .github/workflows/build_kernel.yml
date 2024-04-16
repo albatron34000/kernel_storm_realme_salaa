@@ -1,4 +1,4 @@
-name: build-kernelsu-ok
+name: build-kernel-ok
 
 on:
   workflow_dispatch:
