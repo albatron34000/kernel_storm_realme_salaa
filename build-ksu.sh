@@ -5,8 +5,9 @@
 compile_kernel() {
     # compile_kernel
     export ARCH=arm64
+    export KBUILD_BUILD_USER="Gofaraway71"
     make O=out ARCH=arm64 salaa_defconfig
-
+    rm -rf AnyKernel
     # Generate profile data during the first compilation
     PATH="${PWD}/clang/bin:${PWD}/arm64:${PWD}/arm32:${PATH}" \
     make -j"$(nproc --all)" O=out \
@@ -33,7 +34,7 @@ setup_kernel_release() {
     v=$(cat version)
     d=$(date "+%d%m%Y")
     z="gofaraway-kernel-salaa-$d-$v-ksu.zip"
-    wget --quiet https://psionicprjkt.my.id/assets/files/AK3-salaa.zip && unzip AK3-salaa
+    git clone --depth=1 https://github.com/albatron34000/AnyKernel3.git AnyKernel
     cp out/arch/arm64/boot/Image.gz-dtb AnyKernel && cd AnyKernel
     zip -r9 "$z" *
 }
