@@ -52,12 +52,12 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: mt6785/AnyKernel/gofaraway*
-          name: Gofaraway_salaa_KernelSU
+          name: Gofaraway_salaa_Kernel
           tag_name: ${{ github.run_id }}
           body: |
             Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
             Device: ${{ github.event.inputs.DEVICE_NAME }}
-            Target: salaa_KernelSU
+            Target: salaa_Kernel
             Version:Android14
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
